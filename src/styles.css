@@ -45,7 +45,7 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-coral: var(--coral);
-  --color-coral-foreground: var(--coral-foreground);
+  --color-coral-foreground: var(--green-foreground);
   --color-navy: var(--navy);
   --color-navy-foreground: var(--navy-foreground);
   --color-cream: var(--cream);
@@ -55,7 +55,7 @@
 
 :root {
   --radius: 1rem;
-  --background: color-mix(in oklab, white 94%, var(--brand) 6%);
+  --background: color-mix(in oklab, wh 94%, var(--brand) 6%);
   --foreground: color-mix(in oklab, black 78%, var(--brand) 22%);
   --card: color-mix(in oklab, white 88%, var(--brand) 12%);
   --card-foreground: var(--foreground);

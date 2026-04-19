@@ -44,7 +44,7 @@ const themeColors = {
   // Keep overrides minimal: all other tokens are derived from these in styles.css.
   brand: brandColor,
   "brand-foreground": brandTextOnColor,
-  background: "oklch(0.9 0.05 120)", // Green background
+  background: "oklch(0.95 0.03 120)", // Light green background
 } as const;
 
 export const portfolioConfig: PortfolioConfig = {
