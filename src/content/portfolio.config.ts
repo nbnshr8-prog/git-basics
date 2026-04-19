@@ -20,30 +20,31 @@ const withBase = (path: string) => {
 
 // Quick-edit section: update these values first for most profile/theme changes.
 const profile = {
-  name: "Sagun",
-  role: "Full Stack Developer",
-  location: "Nepal",
-  email: "hello@sagun.dev",
-  linkedin: "linkedin.com/in/sagun",
-  twitterHandle: "@sagun",
+  name: "Nabin Shrestha",
+  role: "philosopher",
+  location: "kathmandu",
+  email: "nbnshr8@gmail.com",
+  linkedin: "Not provided",
+  twitterHandle: "",
 };
 
 const socialLinks = {
-  linkedin: "https://linkedin.com/in/sagun",
+  linkedin: "Not provided",
   github: "https://github.com/sagun",
-  twitter: "https://twitter.com/sagun",
+  twitter: "Not provided",
 };
 
 // Single source of truth for brand hue.
 // Change this one value to retheme all accent-driven UI parts.
-// Switched to a bluish-white direction per user request.
-const brandColor = "oklch(0.62 0.24 25)";
-const brandTextOnColor = "oklch(0.99 0.01 20)";
+// Changed to blue as requested.
+const brandColor = "oklch(0.6 0.2 240)";
+const brandTextOnColor = "oklch(0.99 0.01 240)";
 
 const themeColors = {
   // Keep overrides minimal: all other tokens are derived from these in styles.css.
   brand: brandColor,
   "brand-foreground": brandTextOnColor,
+  background: "oklch(0.9 0.05 120)", // Green background
 } as const;
 
 export const portfolioConfig: PortfolioConfig = {
@@ -78,7 +79,7 @@ export const portfolioConfig: PortfolioConfig = {
   seo: {
     title: `${profile.name} | Developer Portfolio`,
     description:
-      "Full Stack Developer building clean, performant web applications and digital products.",
+      "Philosopher exploring the ideas of Descartes, Berkeley, Kant, and Hume in the realms of metaphysics and epistemology.",
     author: profile.name,
     twitterSite: profile.twitterHandle,
     ogImage:
@@ -96,7 +97,7 @@ export const portfolioConfig: PortfolioConfig = {
       headingPrefix: "Hi, I'm",
       headingHighlight: profile.name,
       description:
-        "I build fast, scalable web applications with modern frontend and backend technologies.",
+        "I am a philosopher fascinated by the ideas of Descartes, Berkeley, Kant, and Hume, exploring the depths of human thought and reality.",
       primaryCta: {
         label: "Let's Connect",
         href: "#contact",
@@ -118,11 +119,11 @@ export const portfolioConfig: PortfolioConfig = {
       title: "About",
       titleHighlight: "Me",
       paragraphs: [
-        "I'm a developer focused on creating reliable, user-friendly applications with clean architecture and strong performance.",
-        "I enjoy turning ideas into products, from UI development to backend APIs, while keeping code maintainable and scalable.",
+        "I'm a philosopher deeply inspired by the profound insights of René Descartes, George Berkeley, Immanuel Kant, and David Hume.",
+        "I dedicate my thoughts to unraveling the mysteries of existence, knowledge, and perception through their timeless philosophical contributions.",
       ],
       image: {
-        src: withBase("/images/sulove-profile.jpeg"),
+        src: withBase("/images/nabin-profile.jpg"),
         alt: `${profile.name} - ${profile.role}`,
         width: 500,
         height: 600,
@@ -252,7 +253,6 @@ export const portfolioConfig: PortfolioConfig = {
       contactItems: [
         { icon: "✉️", label: "Email", value: profile.email, href: `mailto:${profile.email}` },
         { icon: "📍", label: "Location", value: profile.location },
-        { icon: "🔗", label: "LinkedIn", value: profile.linkedin, href: socialLinks.linkedin },
       ],
       image: {
         src: withBase("/images/contact-clipart.png"),
@@ -265,9 +265,7 @@ export const portfolioConfig: PortfolioConfig = {
       id: "footer-main",
       type: "footer",
       socialLinks: [
-        { label: "LinkedIn", href: socialLinks.linkedin },
         { label: "GitHub", href: socialLinks.github },
-        { label: "Twitter", href: socialLinks.twitter },
       ],
       copyrightText: "All rights reserved.",
     },
